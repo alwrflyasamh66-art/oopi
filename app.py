@@ -153,7 +153,7 @@ def save_progress_checkpoint(state, processed, total_added, total_failed):
     sync_operation_record(state, processed, total_added, total_failed, status="running")
 
 class Config:
-    BOT_TOKEN = "8750452306:AAHuS4PPLUVVSvZBX_k3Ox8dF32eHsLXl1E"
+    BOT_TOKEN = "8893581513:AAH2NflNJjnBKf3fCvQWnknr3yGcUg7Qg1A"
     APP_ID = 39978956
     API_HASH = "e7322ed176f1527600979186b4ea8da8"
     OWNER_ID = [8864493211]
