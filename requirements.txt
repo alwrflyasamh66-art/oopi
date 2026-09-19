@@ -1,0 +1,8 @@
+pyrogram
+tgcrypto
+aiogram
+cryptography
+pyaes
+pysocks
+aiosqlite
+ijson
