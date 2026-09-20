@@ -274,7 +274,7 @@ async def subscription_watchdog():
 # ===== إعدادات البوت المضمنة داخل هذا الملف =====
 class Config:
     # ضع توكن البوت هنا مباشرة، أو اترك قراءة متغير البيئة عند تشغيله خارجياً.
-    BOT_TOKEN = "8750452306:AAHuS4PPLUVVSvZBX_k3Ox8dF32eHsLXl1E"
+    BOT_TOKEN = "8876817025:AAHS5ymWu8z6b3WYtQ8mfcraUdnYAqmyui"
     APP_ID = 39978956
     API_HASH = "e7322ed176f1527600979186b4ea8da8"
     OWNER_ID = [8864493211]
