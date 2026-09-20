@@ -4,13 +4,13 @@ from telebot import types
 # ----------------------------------------------------
 # 1. التهيئات وإعداد البوت
 # ----------------------------------------------------
-TOKEN = "8928823279:AAEOiKrPqWz2A1nxcxJDuHnigKotYBsT_2E"  # استبدل هذا بتوكن البوت الخاص بك من BotFather
+TOKEN = "ضع_توكن_البوت_هنا"  # استبدل هذا بتوكن البوت الخاص بك من BotFather
 bot = telebot.TeleBot(TOKEN)
 
 # معرف المطور (استبدله بـ ID الخاص بك)
-ADMIN_ID = 8864493211  
+ADMIN_ID = 123456789  
 
-# تخزين البيانات في الذاكرة (يمكنك ربطها بقاعدة بيانات لاحقاً)
+# تخزين البيانات في الذاكرة
 user_data = {}         # لتتبع حالة المستخدم أثناء الإدخال
 auto_replies = {}      # تخزين الردود النصية: { "الكلمة": "الرد" }
 photo_replies = {}     # تخزين الردود بالصور: { "الكلمة": {"photo_id": ..., "caption": ...} }
@@ -82,6 +82,7 @@ def send_welcome(message):
 # ----------------------------------------------------
 @bot.callback_query_handler(func=lambda call: True)
 def callback_listener(call):
+    global is_auto_reply_active
     chat_id = call.message.chat.id
     user_id = call.from_user.id
     data = call.data
@@ -102,7 +103,6 @@ def callback_listener(call):
         bot.send_message(chat_id, f"⚙️ **إعدادات الرد التلقائي:**\nالحالة الحالية: {status}\n\nاختر من الأسفل:", reply_markup=markup, parse_mode="Markdown")
 
     elif data == "set_auto_on":
-        global is_auto_reply_active
         is_auto_reply_active = True
         bot.answer_callback_query(call.id, "تم تفعيل الرد التلقائي بنجاح!")
         bot.send_message(chat_id, "🟢 تم **تفعيل** الرد التلقائي عندما تكون غير متصل.")
@@ -227,5 +227,5 @@ def handle_user_input(message):
 
 # تشغيل البوت
 if __name__ == '__main__':
-    print("البوت يعمل الآن...")
+    print("البوت يعمل الآن على الاستضافة...")
     bot.infinity_polling()
