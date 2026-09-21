@@ -16,7 +16,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 # ======================================================
 API_ID    = 39978956
 API_HASH  = "e7322ed176f1527600979186b4ea8da8"
-BOT_TOKEN = "8893581513:AAH2NflNJjnBKf3fCvQWnknr3yGcUg7Qg1A"  # توكن بوت المصنع
+BOT_TOKEN = "8737127935:AAFuiJOMQbEeQ2mYf3P2_5D3uKcVhW1lfLU"  # توكن بوت المصنع
 
 # المالك الأصلي لجميع البوتات (ثابت دائماً)
 MASTER_OWNER = [8864493211]
